@@ -1,6 +1,8 @@
 # CARTP-cheatsheet
 Azure AD cheatsheet for the CARTP course
 
+Adiing my Flavor to this
+
 # Index
 * [General](#General)
 * [Recon \ OSINT](recon.md)
