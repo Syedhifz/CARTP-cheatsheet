@@ -1,7 +1,9 @@
+# Copied from Author and adding my Flavour to it for exam
+
 # CARTP-cheatsheet
 Azure AD cheatsheet for the CARTP course
 
-Adiing my Flavor to this
+
 
 # Index
 * [General](#General)
