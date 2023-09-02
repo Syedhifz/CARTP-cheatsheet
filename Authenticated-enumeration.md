@@ -273,7 +273,7 @@ Get-AzureADMSRoleDefinition | ?{$_.IsBuiltin -eq $False} | select DisplayName
 ```
 Get-AzureADDevice -All $true | fl *
 ```
-#### List the devices which are active 
+#### List the devices which are active (and not the stale devices)
 ```
 Get-AzureADDevice -All $true | ?{$_.ApproximateLastLoginTimestamp -ne $null}
 ```
@@ -285,12 +285,21 @@ Get-AzureADDeviceConfiguration | fl *
 
 #### List Registered owners of all the devices
 ```
+// Registred - Owned by User.
+// The below commmand does not have the device name.
 Get-AzureADDevice -All $true | Get-AzureADDeviceRegisteredOwner
+```
+
+```
+// This command has the device name as well 
+Get-AzureADDevice -All $true | %{if($user=Get-AzureADDeviceRegisteredOwner -ObjectId $_.ObjectID){$_;$user.UserPrincipalName;"`n"}} 
 ```
 
 #### List Registered user of all the devices
 ```
 Get-AzureADDevice -All $true | Get-AzureADDeviceRegisteredUser
+Get-AzureADDevice -All $true | %{if($user=Get-AzureADDeviceRegisteredUser -ObjectId
+$_.ObjectID){$_;$user.UserPrincipalName;"`n"}}
 ```
 
 #### List devices owned by a user
