@@ -109,23 +109,32 @@ Get-AzureADUser -SearchString "admin"
 
 #### Search for user who contain the word "admin" in their displayname
 ```
-\\ `?` symbol (which is a shorthand for `Where-Object`)
-\\`$_` represents the current user object being processed in the pipeline
+//  `?` symbol (which is a shorthand for `Where-Object`)
+// `$_` represents the current user object being processed in the pipeline
+
 Get-AzureADUser -All $true |?{$_.Displayname -match "admin"}
 ```
 
 #### List all the attributes for a user
 ```
-\\ Format-List (fl) cmdlet is used to display all available properties of the Azure AD user object retrieved in a formatted list.
-\\ The * is a wildcard character, which tells PowerShell to display all properties.
+// Format-List (fl) cmdlet is used to display all available properties of the Azure AD user object retrieved in a formatted list.
+// The * is a wildcard character, which tells PowerShell to display all properties.
+
 Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | fl *
 
-\\ (%{...})   -  Here, a ForEach-Object loop
+// (%{...})   -  Here, a ForEach-Object loop
+
 Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | %{$_.PSObject.Properties.Name} 
 ```
 
 #### Search attributes for all users that contain the string "password" 
 ```
+//
+1. `Get-AzureADUser -All $true`: This part of the command retrieves all user objects from Azure AD using the `All $true` parameter.
+2. `|%{...}`: This is a `ForEach-Object`** loop (`%{...}`) that iterates over each user object retrieved.
+3. `$Properties = $_;`: Within the loop, it assigns the current user object to the **`$Properties`** variable 
+4. `$Properties.PSObject.Properties.Name`: This part of the command extracts the property names of the user object.
+
 Get-AzureADUser -All $true |%{$Properties = $_;$Properties.PSObject.Properties.Name | % {if ($Properties.$_ -match 'password') {"$($Properties.UserPrincipalName) - $_ - $($Properties.$_)"}}}
 ```
 
