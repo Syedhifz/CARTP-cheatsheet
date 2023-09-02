@@ -247,6 +247,8 @@ Get-AzureADDirectoryroleTemplate
 
 #### Get all roles
 ```
+\\ This are all enabled roles (a user is assigned the role at least once)
+
 Get-AzureADDirectoryRole
 ```
 
@@ -257,6 +259,8 @@ Get-AzureADDirectoryRole -Filter "DisplayName eq 'Global Administrator'" | Get-A
 
 #### List custom roles
 ```
+\\ This section is Author's personal one
+
 Import-Module .\AzureADPreview.psd1
 $creds = Get-Credential
 Connect-AzureAD -Credential $creds
@@ -268,6 +272,10 @@ Get-AzureADMSRoleDefinition | ?{$_.IsBuiltin -eq $False} | select DisplayName
 #### Get all Azure joined and registered devices
 ```
 Get-AzureADDevice -All $true | fl *
+```
+#### List the devices which are active 
+```
+Get-AzureADDevice -All $true | ?{$_.ApproximateLastLoginTimestamp -ne $null}
 ```
 
 #### Get the device configuration object (Note to the registrationquota in the output)
