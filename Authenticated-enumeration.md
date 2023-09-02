@@ -100,7 +100,8 @@ Get-AzureADUser -All $true |?{$_.Displayname -match "admin"}
 
 #### List all the attributes for a user
 ```
-Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | fl * 
+Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | fl *
+fl stands for formated list
 
 Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | %{$_.PSObject.Properties.Name} 
 ```
