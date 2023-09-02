@@ -128,10 +128,13 @@ Get-AzureADUser | Get-AzureADUserCreatedObject
 
 #### Objects owned by a specific user
 ```
-Get-AzureADUserOwnedObject -ObjectId <ID>
+Synatx - Get-AzureADUserOwnedObject -ObjectId <ID>
+Get-AzureADUserOwnedObject -ObjectId test@defcorphq.onmicrosoft.com
+OR
+Get-AzureADUser -ObjectId 08c584dc-8594-4b61-adfc-145d82190dec
 ```
 
-### Group enumeration
+### Group enumeration (p. 56)
 #### List all groups
 ```
 Get-AzureADGroup -All $true
@@ -460,17 +463,17 @@ Get-AzADUser |?{$_.Displayname -match "admin"}
 ```
 
 ### Groups
-#### List all groups
+#### List all groups 
 ```
 Get-AzADGroup
 ```
 
-#### Enumerate a specific group
+#### Enumerate a specific group 
 ```
 Get-AzADGroup -ObjectId <ID>
 ```
 
-#### Search for a group based on string in first characters of displayname (wildcard not supported)
+#### Search for a group based on string in first characters of displayname (wildcard not supported) 
 ```
 Get-AzADGroup -SearchString "admin" | fl * 
 ```
