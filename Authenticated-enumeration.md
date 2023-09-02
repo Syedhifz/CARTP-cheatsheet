@@ -134,7 +134,7 @@ OR
 Get-AzureADUser -ObjectId 08c584dc-8594-4b61-adfc-145d82190dec
 ```
 
-### Group enumeration (p. 56)
+### Group enumeration
 #### List all groups
 ```
 Get-AzureADGroup -All $true
