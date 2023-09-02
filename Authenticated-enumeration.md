@@ -72,6 +72,7 @@ $creds = New-Object System.Management.Automation.PSCredential ("test@defcorphq.o
 ```
 
 ```
+// The command which is used to connect using the credentials from the variable assigned earlier. 
 Connect-AzureAD -Credential $creds
 ```
 
@@ -108,14 +109,18 @@ Get-AzureADUser -SearchString "admin"
 
 #### Search for user who contain the word "admin" in their displayname
 ```
+\\ `?` symbol (which is a shorthand for `Where-Object`)
+\\`$_` represents the current user object being processed in the pipeline
 Get-AzureADUser -All $true |?{$_.Displayname -match "admin"}
 ```
 
 #### List all the attributes for a user
 ```
+\\ Format-List (fl) cmdlet is used to display all available properties of the Azure AD user object retrieved in a formatted list.
+\\ The * is a wildcard character, which tells PowerShell to display all properties.
 Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | fl *
 
-
+\\ (%{...})   -  Here, a ForEach-Object loop
 Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com | %{$_.PSObject.Properties.Name} 
 ```
 
