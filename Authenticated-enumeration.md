@@ -362,6 +362,7 @@ Get-AzureADApplicationPasswordCredential -objectID <ID>
 ```
  List all the apps with an application password
 ```
+```
 Get-AzureADApplication -All $true | %{if(GetAzureADApplicationPasswordCredential -ObjectID $_.ObjectID){$_}}
 ```
 
