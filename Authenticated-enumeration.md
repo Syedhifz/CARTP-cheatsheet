@@ -56,15 +56,25 @@ Import-Module C:\AzAD\Tools\AzureAD\AzureAD.psd1
 
 #### Connect to Azure AD
 ```
+// Not used often, the below on is used//
 $creds = Get-Credential
 Connect-AzureAD -Credential $creds
 ```
 
 ```
 $passwd = ConvertTo-SecureString "<PASSWORD>" -AsPlainText -Force
+$passwd = ConvertTo-SecureString "ThP@dbshbfjdsbfj" -AsPlainText -Force
+```
+
+```
 $creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $passwd)
+$creds = New-Object System.Management.Automation.PSCredential ("test@defcorphq.onmicrosoft.com", $passwd)
+```
+
+```
 Connect-AzureAD -Credential $creds
 ```
+
 
 #### Get the current session state
 ```
