@@ -275,7 +275,7 @@ Get-AzureADDevice -All $true | fl *
 ```
 #### List the devices which are active (and not the stale devices)
 ```
-Get-AzureADDevice -All $true | ?{$_.ApproximateLastLoginTimestamp -ne $null}
+Get-AzureADDevice -All $true | ?{$_.ApproximateLastLogonTimeStamp -ne $null}
 ```
 
 #### Get the device configuration object (Note to the registrationquota in the output)
