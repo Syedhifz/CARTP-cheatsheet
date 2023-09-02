@@ -210,7 +210,11 @@ Get-AzureADUserMembership -ObjectId test@defcorphq.onmicrosoft.com
 
 #### Usefull group + member script
 ```
-//The output of the script will be a table or list of group names, user display names, email addresses, and user types for all members of the Azure AD groups retrieved using the AzureAD and AzureADMS modules.
+The PowerShell script you've provided is designed to retrieve information about users who are members of 
+Azure AD groups using the AzureAD and AzureADMS (Azure Active Directory Identity Protection) modules. 
+It creates a custom object to organize and store this information and then displays the results.
+The output of the script will be a table or list of group names, user display names, email addresses, 
+and user types for all members of the Azure AD groups retrieved using the AzureAD and AzureADMS modules.
 ```
 ```
 $roleUsers = @() 
