@@ -359,11 +359,9 @@ Get-AzureADApplication -All $true | ?{$_.DisplayName -match "app"}
 Get-AzureADApplicationPasswordCredential -objectID <ID>
 ```
 
+####  List all the apps with an application password
 ```
- List all the apps with an application password
-```
-```
-Get-AzureADApplication -All $true | %{if(GetAzureADApplicationPasswordCredential -ObjectID $_.ObjectID){$_}}
+Get-AzureADApplication -All $true | %{if(Get-AzureADApplicationPasswordCredential -ObjectID $_.ObjectID){$_}}
 ```
 
 #### Get the owner of a application
