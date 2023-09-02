@@ -56,18 +56,18 @@ Import-Module C:\AzAD\Tools\AzureAD\AzureAD.psd1
 
 #### Connect to Azure AD
 ```
-// Not used often, the below on is used//
+// Not used often, the below one is used//
 $creds = Get-Credential
 Connect-AzureAD -Credential $creds
 ```
 
 ```
-$passwd = ConvertTo-SecureString "<PASSWORD>" -AsPlainText -Force
+Syntax -> $passwd = ConvertTo-SecureString "<PASSWORD>" -AsPlainText -Force
 $passwd = ConvertTo-SecureString "ThP@dbshbfjdsbfj" -AsPlainText -Force
 ```
 
 ```
-$creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $passwd)
+Syntax -> $creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $passwd)
 $creds = New-Object System.Management.Automation.PSCredential ("test@defcorphq.onmicrosoft.com", $passwd)
 ```
 
@@ -95,7 +95,10 @@ Get-AzureADUser -all $true | Select-Object UserPrincipalName, Usertype
 
 #### Enumerate a specific user
 ```
-Get-AzureADUser -ObjectId <ID>
+Syntax -> Get-AzureADUser -ObjectId <ID>
+//ID can be the Useremail or a Object ID as well 
+Get-AzureADUser -ObjectId test@defcorphq.onmicrosoft.com
+Get-AzureADUser -ObjectId 08c584dc-8594-4b61-adfc-145d82190dec*
 ```
 
 #### Search for a user based on string in first characters of displayname (Wildcard not supported)
