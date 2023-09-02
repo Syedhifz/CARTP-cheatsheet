@@ -157,7 +157,6 @@ Get-AzureADGroup -All $true |?{$_.Displayname -match "admin"}
 
 #### Get groups that allow Dynamic membership (note the cmdlet name)
 ```
-Import-module AzureADPreview.psd1
 Get-AzureADMSGroup | ?{$_.GroupTypes -eq 'DynamicMembership'}  | fl *
 ```
 
