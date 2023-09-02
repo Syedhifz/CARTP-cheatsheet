@@ -51,7 +51,7 @@ Login to the azure portal with successfull attacks https://portal.azure.com/
 - https://www.powershellgallery.com/packages/AzureAD
 - Rename .nukpkg to .zip and extract it
 ```
-Import-Module AzureAD.psd1
+Import-Module C:\AzAD\Tools\AzureAD\AzureAD.psd1
 ```
 
 #### Connect to Azure AD
