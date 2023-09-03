@@ -526,7 +526,7 @@ Get-AzADUser
 
 #### Enumerate a specific user
 ```
-Get-AzADUser -UserPrincipalName <NAME>
+Get-AzADUser -UserPrincipalName <email>
 ```
 
 #### Search for a user based on string in first character of displayname (Wildcard not supported)
