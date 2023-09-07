@@ -62,12 +62,11 @@ Connect-AzureAD -Credential $creds
 ```
 
 ```
-Syntax -> $passwd = ConvertTo-SecureString "<PASSWORD>" -AsPlainText -Force
-$passwd = ConvertTo-SecureString "ThP@dbshbfjdsbfj" -AsPlainText -Force
+$passwd = ConvertTo-SecureString "<PASSWORD>" -AsPlainText -Force
 ```
 
 ```
-Syntax -> $creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $passwd)
+$creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $passwd)
 $creds = New-Object System.Management.Automation.PSCredential ("test@defcorphq.onmicrosoft.com", $passwd)
 ```
 
