@@ -70,7 +70,7 @@ Invoke-EnumerateAzureBlobs -Base <SHORT DOMAIN> -OutputFile azureblobs.txt
 - Could gather list of emails from something like harvester or hunter.io or smth and validate them!
 - admin, root, test, contact (try those default for exam)
 ```
-python o365creeper.py -f list_of_emails.txt -o validemails.txt
+**PS C:\AzAD\Tools>**   C:\Python27\python.exe C:\AzAD\Tools\o365creeper\o365creeper.py -f C:\AzAD\Tools\emails.txt -o C:\AzAD\Tools\validemails.txt
 ```
 - Possible to use https://github.com/nyxgeek/onedrive_user_enum (Non-lab-tool)
 
