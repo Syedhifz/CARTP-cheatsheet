@@ -53,7 +53,7 @@ Invoke-AADIntReconAsOutsider -DomainName <DOMAIN>
 - https://github.com/NetSPI/MicroBurst
 - Edit the permutations.txt to add permutations such as career, hr, users, file and backup
 ```
-Import-Module MicroBurst.psm1 -Verbose
+ Import-Module C:\AzAD\Tools\MicroBurst\MicroBurst.psm1 -Verbose
 Invoke-EnumerateAzureSubDomains -Base <SHORT DOMAIN NAME> -Verbose
 ```
 
