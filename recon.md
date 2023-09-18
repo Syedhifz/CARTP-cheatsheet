@@ -24,6 +24,7 @@ https://github.com/Gerenios/AADInternals
 https://o365blog.com/aadinternals/
 #### Import the AADinternals module
 ```
+ cd C:\AzAD\Tools\AADInternals\
 import-module .\AADInternals.psd1
 ```
 
