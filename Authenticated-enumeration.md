@@ -404,8 +404,7 @@ Get-AzureADServicePrincipal -All $true | ?{$_.DisplayName -match "app"}
 
 #### List all the service principals with an application password
 ```
-Get-AzureADServicePrincipal -All $true | %{if(Get-AzureADServicePrincipalKeyCredential -
-ObjectID $_.ObjectID){$_}} 
+Get-AzureADServicePrincipal -All $true | %{if(Get-AzureADServicePrincipalKeyCredential -ObjectID $_.ObjectID){$_}} 
 ```
 
 #### Get owners of a service principal
