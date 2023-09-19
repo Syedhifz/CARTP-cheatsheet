@@ -1191,7 +1191,7 @@ python C:\AzAD\Tools\stormspotter\stormcollector\sscollector.pyz cli
 
 #### Run the collector to collect data
 ```
-import-module .\AzureAD.psd1
+import-module C:\AzAD\Tools\AzureAD\AzureAD.psd1
 
 $passwd = ConvertTo-SecureString "<PASSWORD>" -AsPlainText -Force
 $creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $passwd) 
@@ -1199,8 +1199,7 @@ Connect-AzAccount -Credential $creds
 Connect-AzureAD -Credential $creds
 
 
-. C:\AzAD\Tools\AzureHound\AzureHound.ps1
-Invoke-AzureHound -Verbose
+. C:\AzAD\Tools\AzureHound\AzureHound.ps1 Invoke-AzureHound -Verbose
 ```
 
 #### Change object ID's to names in Bloodhound
