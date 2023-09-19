@@ -1206,6 +1206,7 @@ C:\Tools> Invoke-AzureHound -Verbose
 ```
 BLOOD HOUND GUI 
 Please find the GUI in the below path. CLick on the application to open the GUI
+ creds = neo4j:BloodHound
 
 C:\AzAD\Tools\BloodHound-win32-x64\BloodHound-win32-x64
 ```
