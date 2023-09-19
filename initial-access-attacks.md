@@ -16,12 +16,6 @@
 Invoke-MSOLSpray -UserList C:\AzAD\Tools\validemails.txt -Password V3rYT0pSEcretP@@swordF0rT3st -Verbose
 ```
 
-#### Find valid emails
-- Explained in Recon or use the command below
-```
-C:\Python27\python.exe o365creeper.py -f emails.txt -o validemails.txt
-```
-
 ## Illicit Consent Grant phishing
 #### Create a application
 - Login to the Azure portal and in the left menu go to 'Azure Active Directory' --> 'App registrations' and click 'new registration'
