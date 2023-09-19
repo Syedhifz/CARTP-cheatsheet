@@ -305,11 +305,15 @@ $_.ObjectID){$_;$user.UserPrincipalName;"`n"}}
 
 #### List devices owned by a user
 ```
+NOTE - ID can be the email address
+NOTE - By default Owners of a device are added to Local admin group if device is AAD Joined 
+
 Get-AzureADUserOwnedDevice -ObjectId <ID>
 ```
 
 #### List deviced registered by a user
 ```
+Note - ID can be the email address 
 Get-AzureADUserRegisteredDevice -ObjectId <ID>
 ```
 
