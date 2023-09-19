@@ -12,7 +12,7 @@
 - https://github.com/dafthack/MSOLSpray
 - https://github.com/ustayready/fireprox
 ```
-Import-Module .\MSOLSpray.ps1
+. C:\AzAD\Tools\MSOLSpray\MSOLSpray.ps1
 Invoke-MSOLSpray -UserList validemails.txt -Password <PASSWORD> -Verbose
 ```
 
