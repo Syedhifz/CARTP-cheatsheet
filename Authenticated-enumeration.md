@@ -1152,6 +1152,7 @@ roadrecon gather
 
 #### Start roadrecon gui
 ```
+// start this from a new powershell promot aftergoing to the RoadToold path and use Pipenv Shell as well 
 roadrecon gui
 ```
 
