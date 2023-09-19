@@ -260,7 +260,7 @@ Get-AzureADDirectoryRole -Filter "DisplayName eq 'Global Administrator'" | Get-A
 ```
 \\ ALways open this in a new powershell session, you cant load the module in existing session
 Import-Module C:\AzAD\Tools\AzureADPreview\AzureADPreview.psd1
-$passwd = ConvertTo-SecureString "ThP@ssW0rd1sVeryH4rDT0GuessN0tB3Crack3d" -AsPlainText -Force
+$passwd = ConvertTo-SecureString <password> -AsPlainText -Force
 $creds = New-Object System.Management.Automation.PSCredential ("test@defcorphq.onmicrosoft.com", $passwd)
 Connect-AzureAD -Credential $creds
 ```
