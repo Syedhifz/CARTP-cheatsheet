@@ -1198,8 +1198,9 @@ $creds = New-Object System.Management.Automation.PSCredential ("<USERNAME>", $pa
 Connect-AzAccount -Credential $creds
 Connect-AzureAD -Credential $creds
 
+C:\Tools> . C:\AzAD\Tools\AzureHound\AzureHound.ps1
 
-. C:\AzAD\Tools\AzureHound\AzureHound.ps1 Invoke-AzureHound -Verbose
+C:\Tools> Invoke-AzureHound -Verbose
 ```
 
 #### Change object ID's to names in Bloodhound
