@@ -1203,6 +1203,13 @@ C:\Tools> . C:\AzAD\Tools\AzureHound\AzureHound.ps1
 C:\Tools> Invoke-AzureHound -Verbose
 ```
 
+```
+BLOOD HOUND GUI 
+Please find the GUI in the below path. CLick on the application to open the GUI
+
+C:\AzAD\Tools\BloodHound-win32-x64\BloodHound-win32-x64
+```
+
 #### Change object ID's to names in Bloodhound
 ```
 MATCH (n) WHERE n.azname IS NOT NULL AND n.azname <> "" AND n.name IS NULL SET n.name = n.azname
