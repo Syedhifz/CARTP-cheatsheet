@@ -505,6 +505,7 @@ Get-AzResource | select-object Name, Resourcetype
 #### Enumerate all Azure RBAC role assignments
 ```
 Get-AzRoleAssignment
+Get-AzRoleAssignment -SignInName test@defcorphq.onmicrosoft.com
 ```
 
 #### Check role assignments on ResourceID
