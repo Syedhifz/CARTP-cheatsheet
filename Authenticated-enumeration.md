@@ -432,18 +432,15 @@ Get-AzureADServicePrincipal | Get-AzureADServicePrincipalMembership
 ## Enumeration using Az powershell
 #### Install module
 ```
-// This should be in Tools so skip it
 Install-Module Az
 ```
 
 #### Connect to Azure AD first 
 ```
-// 2 ways, the first is a pop up for Username and password 
 $creds = Get-Credential
 Connect-AzAccount -Credential $creds
 ```
 ```
-// Supplying the creds direclt 
 $passwd = ConvertTo-SecureString "SuperVeryEasytoGuessPassword@1234" -AsPlainText -Force
 $creds = New-Object System.Management.Automation.PSCredential ("test@defcorphq.onmicrosoft.com", $passwd) 
 Connect-AzAccount -Credential $creds
