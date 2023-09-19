@@ -615,6 +615,8 @@ Get-AzFunctionApp
 ```
 Get-AzWebApp
 Get-AzWebApp | select-object Name, Type, Hostnames
+//List all App Services. We filter on the bases of 'Kind' proper otherwise both appservices and function apps are listed:
+Get-AzWebApp | ?{$_.Kind -notmatch "functionapp"}
 ```
 
 #### List all storage accounts
