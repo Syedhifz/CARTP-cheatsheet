@@ -580,6 +580,10 @@ Get-AzADApplication -ObjectId <ID>
 Get-AzADApplication | ?{$_.DisplayName -match "app"}
 ```
 
+#### Get all applications with an application password.
+```
+Get-AzADApplication | %{if(Get-AzADAppCredential -ObjectID $_.ID){$_}}
+```
 #### Get all service principals
 ```
 Get-AzADServicePrincipal
