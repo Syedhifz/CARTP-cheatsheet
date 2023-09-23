@@ -170,6 +170,7 @@ Get-AzRoleDefinition -Name "<ROLE DEFINITION NAME>"
 #### Run a command on the VM
 ```
 Invoke-AzVMRunCommand -VMName <VM NAME> -ResourceGroupName <NAME> -CommandId 'RunPowerShellScript' -ScriptPath '<PATH TO .ps1 FILE>' -Verbose
+Invoke-AzVMRunCommand -VMName bkpadconnect -ResourceGroupName Engineering -CommandId 'RunPowerShellScript' -ScriptPath 'C:\AzAD\Tools\adduser.ps1' -Verbose
 ```
 
 #### Contents of adduser.ps1
